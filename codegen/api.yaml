@@ -1,0 +1,43 @@
+openapi: 3.0.0
+info:
+  title: MarkdownEditor API
+  description: MarkdownEditor API
+  version: 1.0.0
+paths:
+  /login:
+    post:
+      operationId: login
+      x-jvm-package: login
+      description: login api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/loginInfo'
+      responses:
+        '200' :
+          description: login success
+          content:
+            application/json:
+              schema:
+                  $ref: '#/components/schemas/loginResponse'
+components:
+  schemas:
+   loginInfo :
+     type : object
+     required:
+       - userId
+       - password
+     properties:
+       userId:
+         type: string
+       password:
+         type: string
+   loginResponse :
+     type : object
+     required:
+       - token
+     properties:
+       token:
+         type: string
+         example: "aoaw@eofaoidsjfasjfaoiew"
