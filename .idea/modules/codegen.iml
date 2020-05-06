@@ -7,7 +7,9 @@
     <content url="file://$MODULE_DIR$/../../codegen">
       <sourceFolder url="file://$MODULE_DIR$/../../codegen/target/scala-2.12/src_managed/main" isTestSource="false" generated="true" />
       <excludeFolder url="file://$MODULE_DIR$/../../codegen/target" />
+      <excludeFolder url="file://$MODULE_DIR$/../../codegen/target/project" />
       <excludeFolder url="file://$MODULE_DIR$/../../codegen/target/streams" />
+      <excludeFolder url="file://$MODULE_DIR$/../../codegen/target/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -48,6 +48,7 @@
     <orderEntry type="library" name="sbt: org.scalikejdbc:scalikejdbc-core_2.12:3.4.1:jar" level="project" />
     <orderEntry type="library" name="sbt: org.scalikejdbc:scalikejdbc-interpolation-macro_2.12:3.4.1:jar" level="project" />
     <orderEntry type="library" name="sbt: org.scalikejdbc:scalikejdbc-interpolation_2.12:3.4.1:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="sbt: org.scalikejdbc:scalikejdbc-test_2.12:3.4.1:jar" level="project" />
     <orderEntry type="library" name="sbt: org.scalikejdbc:scalikejdbc_2.12:3.4.1:jar" level="project" />
     <orderEntry type="library" name="sbt: org.slf4j:slf4j-api:1.7.30:jar" level="project" />
     <orderEntry type="library" name="sbt: org.typelevel:cats-core_2.12:2.1.1:jar" level="project" />
