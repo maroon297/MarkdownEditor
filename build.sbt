@@ -7,6 +7,7 @@ ThisBuild / organizationName := "maroon297"
 
 lazy val core = (project in file("core"))
   .dependsOn(codegen)
+  .enablePlugins(ScalikejdbcPlugin)
   .settings(
     name := "core",
     libraryDependencies ++= {
@@ -14,13 +15,13 @@ lazy val core = (project in file("core"))
         scalaTest % Test,
         "org.scalikejdbc" %% "scalikejdbc"       % "3.4.1",
         "org.scalikejdbc" %% "scalikejdbc-config"  % "3.4.1",
+        "org.scalikejdbc" %% "scalikejdbc-test" % "3.4.1" % Test,
         "ch.qos.logback"  %  "logback-classic"   % "1.2.3",
          "mysql" % "mysql-connector-java" % "8.0.19",
         "com.typesafe.akka" %% "akka-stream" % "2.6.4",
         "com.typesafe.akka" %% "akka-http" % "10.1.11")
     }
   )
-enablePlugins(ScalikejdbcPlugin)
 
 lazy val codegen = (project in file("codegen"))
     .settings(
