@@ -9,6 +9,7 @@ lazy val core = (project in file("core"))
   .dependsOn(codegen)
   .enablePlugins(ScalikejdbcPlugin)
   .settings(
+    scalacOptions += "-Ypartial-unification",
     name := "core",
     libraryDependencies ++= {
       Seq(
@@ -18,8 +19,11 @@ lazy val core = (project in file("core"))
         "org.scalikejdbc" %% "scalikejdbc-test" % "3.4.1" % Test,
         "ch.qos.logback"  %  "logback-classic"   % "1.2.3",
          "mysql" % "mysql-connector-java" % "8.0.19",
-        "com.typesafe.akka" %% "akka-stream" % "2.6.4",
-        "com.typesafe.akka" %% "akka-http" % "10.1.11")
+        "com.typesafe.akka" %% "akka-stream" % "2.6.5",
+        "com.typesafe.akka" %% "akka-http" % "10.1.11",
+        "com.typesafe.akka" %% "akka-stream-testkit" % "2.6.5" % Test,
+        "com.typesafe.akka" %% "akka-http-testkit" % "10.1.11" % Test
+      )
     }
   )
 
@@ -29,7 +33,7 @@ lazy val codegen = (project in file("codegen"))
       libraryDependencies ++= {
         val circeVersion = "0.13.0"
         Seq(
-          "com.typesafe.akka" %% "akka-stream" % "2.6.4",
+          "com.typesafe.akka" %% "akka-stream" % "2.6.5",
           "com.typesafe.akka" %% "akka-http" % "10.1.11",
           "io.circe" %% "circe-core" % circeVersion,
           "io.circe" %% "circe-generic" % circeVersion,

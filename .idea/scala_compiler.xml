@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="sbt 1" modules="codegen,core,markdownEditor,markdowneditor,scalikejdbc_test,scalikejdbc_test_2177" />
+    <profile name="sbt 1" modules="codegen,markdownEditor,markdowneditor,scalikejdbc_test,scalikejdbc_test_2177" />
+    <profile name="sbt 2" modules="core">
+      <parameters>
+        <parameter value="-Ypartial-unification" />
+      </parameters>
+    </profile>
   </component>
 </project>
